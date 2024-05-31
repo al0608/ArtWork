@@ -1,0 +1,23 @@
+Installed:
+Package    Version
+---------- -------
+asgiref    3.8.1
+Django     5.0.6
+pillow     10.3.0
+pip        24.0
+setuptools 65.5.0
+sqlparse   0.5.0
+tzdata     2024.1
+
+
+commands:
+
+django-admin startproject core .
+
+python manage.py startapp ArtWork
+
+python manage.py migrate
+
+python manage.py createsuperuser
+admin	Bovert!1
+

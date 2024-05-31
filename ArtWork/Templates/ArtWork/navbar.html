@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}">Artwork</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          {% comment %} {% if user.is_authenticated %}
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Add
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'add_artwork' %}">Artwork</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_artist' %}">Artist</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_brushShape' %}">BrushShape</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_finishingLayers' %}">FinishingLayer</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_ground' %}">Ground</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_location' %}">Location</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_movement' %}">Movement</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_pigment' %}">Pigment</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_remark' %}">Remarks</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_seriesGroup' %}">SeriesGroup</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_subject' %}">Subject</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_supportType' %}">SupportType</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_technique' %}">Technique</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_underdrawingMaterial' %}">UnderdrawingMaterial</a></li>
+              <li><a class="dropdown-item" href="{% url 'add_image' %}">Image</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'update_artwork' %}">Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'list_artwork' %}">List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout_user' %}">Logout</a>
+          </li>
+
+          {% else %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'admin:index' %}">Login</a>
+          </li>
+
+          {% endif %} {% endcomment %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'admin:index' %}">Login</a>
+          </li>
+
+        </ul>
+        {% comment %} <form class="d-flex" method=POST action="{% url 'art_search' %}">
+            {% csrf_token %}
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> {% endcomment %}
+      </div>
+    </div>
+  </nav>
